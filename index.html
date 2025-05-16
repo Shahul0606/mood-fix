@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Feelings & Fixes — Your Personal Mood Helper</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Comic+Neue&display=swap');
+    body {
+      font-family: 'Comic Neue', cursive, sans-serif;
+      background: linear-gradient(135deg, #a1c4fd, #c2e9fb);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+    .form-container {
+      background: #fff;
+      border-radius: 20px;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+      padding: 30px 35px;
+      width: 360px;
+    }
+    h2 {
+      text-align: center;
+      color: #3a86ff;
+      margin-bottom: 25px;
+    }
+    label {
+      display: block;
+      margin-top: 15px;
+      font-weight: 600;
+      color: #023e8a;
+    }
+    input, textarea, select, button {
+      width: 100%;
+      padding: 12px;
+      margin-top: 6px;
+      border-radius: 10px;
+      border: 1px solid #90caf9;
+      font-size: 15px;
+      font-family: inherit;
+      transition: border-color 0.3s ease;
+    }
+    input:focus, textarea:focus, select:focus {
+      border-color: #3a86ff;
+      outline: none;
+    }
+    textarea {
+      resize: vertical;
+    }
+    button {
+      margin-top: 25px;
+      background: #3a86ff;
+      color: white;
+      font-weight: 700;
+      border: none;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+    button:hover {
+      background: #265dab;
+    }
+  </style>
+</head>
+<body>
+  <div class="form-container">
+    <h2>Feelings & Fixes 💙</h2>
+    <form action="https://formspree.io/f/xeogngzz" method="POST">
+      <label for="title">What's on your mind?</label>
+      <input type="text" id="title" name="title" placeholder="Give it a title..." required />
+
+      <label for="complaint">Share your thoughts</label>
+      <textarea id="complaint" name="complaint" rows="4" placeholder="Let it all out here..." required></textarea>
+
+      <label for="mood">Mood right now</label>
+      <select id="mood" name="mood" required>
+        <option>😊 Happy</option>
+        <option>😕 Confused</option>
+        <option>😔 Down</option>
+        <option>😠 Frustrated</option>
+        <option>😴 Tired</option>
+        <option>😴 Sleepy</option>
+      </select>
+
+      <label for="fix">What helps you feel better?</label>
+      <select id="fix" name="fix" required>
+        <option>☕ A cup of coffee</option>
+        <option>🎵 Music & Chill</option>
+        <option>📚 Reading time</option>
+        <option>🤗 Hugs</option>
+        <option>😘 Kisses</option>
+        <option>❤️ Care</option>
+        <option>🍫 Chocolate treats</option>
+        <option>🚗 Car date</option>
+        <option>🧘‍♂️ Meditation & Breathing</option>
+      </select>
+
+      <button type="submit">Send Feelings</button>
+    </form>
+  </div>
+</body>
+</html>
